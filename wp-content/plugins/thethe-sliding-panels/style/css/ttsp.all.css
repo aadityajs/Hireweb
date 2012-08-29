@@ -1,0 +1,189 @@
+/**
+ * TheThe Sliding Panels - CSS
+*/
+@import url("ttsp.topPanel.css");
+@import url("ttsp.bottomPanel.css");
+@import url("ttsp.leftPanel.css");
+@import url("ttsp.rightPanel.css");
+@import url("ttsp.popUp.css");
+
+.tspTrigger div{
+	position:relative;
+}
+.tspTrigger span{
+	display:block;
+	text-align:center;
+	height:23px;
+	line-height:22px;
+	width:118px;	
+	position:absolute;
+}
+#tspLeftFixed .tspTrigger span{
+	margin-top:-11px;
+	top:50%;	
+	margin-left:-59px;
+	left:50%;
+	
+	-webkit-transform: rotate(90deg);
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform: rotate(90deg);
+	-moz-transform-origin: 50% 50%;
+	-o-transform: rotate(90deg);
+	-o-transform-origin: 50% 50%;
+	-ms-transform: rotate(90deg);
+	-ms-transform-origin: 50% 50%;
+	transform: rotate(90deg);
+	transform-origin: 50% 50%;
+}
+#tspRightFixed .tspTrigger span{
+	margin-top:-11px;
+	top:50%;	
+	margin-left:-59px;
+	left:50%;	
+
+	-webkit-transform: rotate(-90deg);
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform: rotate(-90deg);
+	-moz-transform-origin: 50% 50%;
+	-o-transform: rotate(-90deg);
+	-o-transform-origin: 50% 50%;
+	-ms-transform: rotate(-90deg);
+	-ms-transform-origin: 50% 50%;
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}
+.thetheSP .tspTitle{
+	margin:0 0 10px;
+}
+.thetheSP .thethe-content{
+	padding:15px;
+	width:auto;
+	height:auto;
+}
+
+.thetheSP .tspPopUpContent{
+	position:absolute;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+}
+.thetheSP{
+	z-index: 1001;
+}
+
+/* slides */
+.thetheSP .tspBg{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:1;
+}
+.thetheSP .tspContent{
+	position:relative;
+	z-index:2;	
+	overflow:hidden;
+	font-size:12px;
+}
+.thetheSP .tspClose {
+	display:block;
+	padding:3px 4px;
+	position:relative;
+	float:right;
+	margin:15px 15px 10px 10px;
+    cursor: pointer;
+	border:1px solid #ccc;
+    font-size: 9px;
+    line-height: 1;
+	z-index:3;	
+}
+.thetheSP .tspTrigger {
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    font-size: 11px;	
+    z-index: 1001;
+}
+.thetheSP .contentSP,
+.thetheSP .tspTrigger .tspTriggerC {
+	border-style:solid;
+	overflow:hidden;
+}
+.thetheSP .backLink{
+	position:absolute;
+	float:right;
+	bottom:0;
+	right:0;
+	z-index:3;
+}
+.thetheSP .backLink a{
+	display:block;
+	line-height:1;
+	font-size:8px;
+	padding:8px;
+	text-decoration:none;
+	color:inherit;
+}
+
+.thetheSP.theme-black .contentSP{
+	border-color:#888;
+}
+.thetheSP.theme-black .tspBg{
+	background-color:#010101;
+}
+.thetheSP.theme-black .tspContent{
+	color:#969696;
+}
+.thetheSP.theme-black .tspClose,
+.thetheSP.theme-black .backLink {
+	border-color:#888;
+	color:#888;
+}
+.thetheSP.theme-black .tspTrigger .tspTriggerC{
+	border-color:#888;	
+	background-color:#010101;
+	color:#969696;	
+}
+
+
+.thetheSP.theme-white .tspBg{
+	background-color:#fefefe;
+}
+.thetheSP.theme-white .contentSP{
+	border-color:#999;		
+}
+.thetheSP.theme-white .tspContent{
+	color:#292929;
+}
+.thetheSP.theme-white .tspClose,
+.thetheSP.theme-white .backLink {
+	border-color:#999;
+	color:#999;
+}
+.thetheSP.theme-white .tspTrigger .tspTriggerC{
+	border-color:#999;	
+	background-color:#fff;
+	color:#292929;
+}
+
+.thetheSP.theme-grey .tspBg{
+	background:#999;
+}
+.thetheSP.theme-grey .contentSP{
+	border-color:#666;	
+}
+.thetheSP.theme-grey .tspContent{
+	color:#292929;
+}
+.thetheSP.theme-grey .tspClose,
+.thetheSP.theme-grey .backLink {
+	border-color:#444;
+	color:#444;
+}
+.thetheSP.theme-grey .tspTrigger .tspTriggerC{
+	border-color:#666;
+	background-color:#999;
+	color:#292929;
+}

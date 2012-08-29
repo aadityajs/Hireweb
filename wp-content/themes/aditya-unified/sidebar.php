@@ -9,7 +9,7 @@
 
 $options = twentyeleven_get_theme_options();
 $current_layout = $options['theme_layout'];
-
+echo is_active_widget('aditya');
 if ( 'content' != $current_layout ) :
 ?>
 		<div id="secondary" class="widget-area" role="complementary">

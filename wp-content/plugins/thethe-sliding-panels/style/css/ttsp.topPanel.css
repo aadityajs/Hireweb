@@ -1,0 +1,55 @@
+/**
+ * TheThe Sliding Panels - Top Panel CSS
+ */
+#tspTopFixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.admin-bar #tspTopFixed{
+    top: 28px;	
+}
+#tspTopPanel {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+
+#tspAbsoluteTP {
+    left: 0;
+    position : absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.containerTP {
+    height: 0;
+}.secondTP {
+}.panelTP {
+    position: relative;
+    z-index: 1000;
+}.contentTP {
+    margin: auto;
+	position:relative;	
+}
+
+#tspTopPanel .tspTriggerTP {
+	position:relative;
+    left: 50%;
+    top: 0;
+    margin-left: -60px;
+    width: 120px;
+}
+.contentTP,
+#tspTopPanel .tspTriggerTP .tspTriggerC{
+	border-top:none !important;
+
+}
+
+#tspTopPanel .tspTriggerTP .tspTriggerC {
+    height: 23px;
+    line-height: 23px;	
+}

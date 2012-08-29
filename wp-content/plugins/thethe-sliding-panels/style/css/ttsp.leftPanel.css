@@ -1,0 +1,38 @@
+/**
+ * TheThe Sliding Panels - Left Panel CSS
+ */
+#tspLeftFixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+}.contentLP {
+    position: absolute;
+    margin: auto;	
+    z-index: 1000;
+}
+#tspAbsoluteLP .tspContent{
+	width:0;	
+}
+#tspAbsoluteLP {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+}
+.tspTriggerLP {
+    width: 23px;
+    top:50% !important;
+	margin-top:-60px !important;
+}
+#tspAbsoluteLP .contentLP,
+#tspAbsoluteLP .tspTriggerLP .tspTriggerC{
+	border-left:none !important;
+}
+.tspTriggerLP .tspTriggerC {
+
+    height: 120px;
+    width: 23px;
+    line-height: 22px;	
+}

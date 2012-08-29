@@ -1,0 +1,35 @@
+/**
+ * TheThe Sliding Panels - Right Panel CSS
+ */
+#tspRightFixed {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+}.contentRP {
+    position: absolute;
+    margin: auto;
+    z-index: 1000;
+}
+#tspAbsoluteRP {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1001;
+}.tspTriggerRP {
+    width: 23px;
+    height: 118px;
+	top:50% !important;
+	margin-top:-59px !important;	
+}
+
+#tspAbsoluteRP .contentSP,
+#tspAbsoluteRP .tspTriggerRP .tspTriggerC{
+	border-right:none !important;
+}
+.tspTriggerRP .tspTriggerC {
+    height: 118px;
+    width: 23px;
+    line-height: 22px;	
+}

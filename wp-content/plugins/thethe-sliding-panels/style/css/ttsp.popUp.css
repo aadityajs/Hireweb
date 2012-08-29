@@ -1,0 +1,60 @@
+/**
+ * TheThe Sliding Panels - Top Panel CSS
+ */
+#tspPopUpFixed {
+	display:none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+	z-index:1002;
+}
+#thetheModalWindow{
+	display:none;	
+}
+
+#tspPopUpFixed .overflow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+#tspPopUpAbsolute {
+    position: absolute;
+    z-index: 1000;
+}
+#tspPopUpAbsolute .tspPopUpContent{
+	padding:20px;
+	position:relative;
+	z-index:2;
+}
+#tspPopUpAbsolute .tspClose{
+	margin:0 0 10px 10px;
+}
+/* Themes */
+/* black */
+#tspPopUpFixed.theme-black .overflow{
+	background:#292929;
+}
+/* white */
+#tspPopUpFixed.theme-white .overflow{
+	background:#fff;
+}
+
+#tspPopUpFixed.theme-white .tspClose{
+	border-color:#999;
+	color:#999;
+}
+/* grey */
+#tspPopUpFixed.theme-grey .overflow{
+	background:#999;
+}
+
+#tspPopUpFixed.theme-grey .tspClose{
+	border-color:#666;
+	color:#666;
+}

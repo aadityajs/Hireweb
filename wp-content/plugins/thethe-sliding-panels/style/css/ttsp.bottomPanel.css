@@ -1,0 +1,54 @@
+/**
+ * TheThe Sliding Panels - Bottom Panel CSS
+ */
+#tspBottomFixed {
+    position: fixed;
+    left: 0;
+    bottom:0;
+    width: 100%;
+}
+#tspBottomPanel {
+    position: absolute;
+    left: 0;
+    bottom: 23px;
+    width: 100%;
+    z-index: -1;
+}
+
+#tspAbsoluteBP {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.containerBP {
+    height: 0;
+}.secondBP {
+    position: relative;
+    top: 23px;
+}.panelBP {
+    position: relative;
+    z-index: 1000;
+}.contentBP {
+	position:relative;
+	margin:0 auto;
+}
+#tspBottomPanel .tspTriggerBP {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    cursor: pointer;
+    margin-left: -60px;
+    width: 120px;
+    z-index: 1001;
+}
+#tspBottomPanel .contentTP,
+#tspBottomPanel .tspTriggerBP .tspTriggerC{
+	border-style:solid;
+	border-bottom:none !important;
+}
+#tspBottomPanel .tspTriggerBP .tspTriggerC {
+    height: 23px;
+    line-height: 23px;
+}

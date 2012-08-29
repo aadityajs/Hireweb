@@ -47,6 +47,11 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+
+<!-- Hireweb css -->
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/hireweb.css" />
+<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/base.css" /> -->
+
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -67,15 +72,43 @@
 ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body> <?php //body_class(); ?>
 <div id="page" class="hfeed">
-	<header id="branding" role="banner">
-			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
 
-			<?php
+<header id="branding" role="banner" class="header">
+     <div id="header">
+     	<a class="logo" href="#"></a>
+        <div class="contact_info">
+             <span>Call us:</span> +919331727063 / 913340602205
+            <img src="<?php bloginfo( 'template_directory' ); ?>/images/social_01.png" alt="">
+            <img src="<?php bloginfo( 'template_directory' ); ?>/images/social_01.png" alt="">
+            <img src="<?php bloginfo( 'template_directory' ); ?>/images/social_01.png" alt="">
+        </div>
+
+		<!--  --><hgroup>
+			<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+		</hgroup>
+        <nav>
+	        <h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
+			<?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
+			<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
+			<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
+			<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
+			<?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	        <?php wp_nav_menu( array('menu' => 'topmenu')); ?>
+        </nav>
+       <div class="clear"></div>
+     </div>
+</header><!-- #branding -->
+
+ <!--end head-->
+<!--end banner-->
+<section id="banner">
+  <!-- <a class="getaquote" href="#"></a> -->
+  <div class="banner">
+  	<!--<img src="<?php bloginfo( 'template_directory' ); ?>/images/headers/banner.png" alt="">-->
+  	<?php
 				// Check to see if the header image has been removed
 				$header_image = get_header_image();
 				if ( $header_image ) :
@@ -112,9 +145,9 @@
 			</a>
 			<?php endif; // end check for removed header image ?>
 
-			<?php
-				// Has the text been hidden?
-				if ( 'blank' == get_header_textcolor() ) :
+			<!-- <?php
+			// Has the text been hidden?
+			if ( 'blank' == get_header_textcolor() ) :
 			?>
 				<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
 				<?php get_search_form(); ?>
@@ -123,17 +156,11 @@
 				else :
 			?>
 				<?php get_search_form(); ?>
-			<?php endif; ?>
+			<?php endif; ?> -->
+  </div>
+</section>
+<!--end banner-->
 
-			<nav id="access" role="navigation">
-				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
-				<?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
-				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
-				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
-				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #access -->
-	</header><!-- #branding -->
 
 
 	<div id="main">

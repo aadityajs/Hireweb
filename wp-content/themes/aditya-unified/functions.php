@@ -131,7 +131,7 @@ function twentyeleven_setup() {
 		// Callback used to display the header preview in the admin.
 		'admin-preview-callback' => 'twentyeleven_admin_header_image',
 	);
-	
+
 	add_theme_support( 'custom-header', $custom_header_support );
 
 	if ( ! function_exists( 'get_custom_header' ) ) {
@@ -221,7 +221,7 @@ function twentyeleven_header_style() {
 	// If no custom options for text are set, let's bail.
 	if ( $text_color == HEADER_TEXTCOLOR )
 		return;
-		
+
 	// If we get this far, we have custom styles. Let's do this.
 	?>
 	<style type="text/css">
@@ -390,10 +390,37 @@ function twentyeleven_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'twentyeleven' ),
 		'id' => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
+		'before_widget' => '<div class="body_right"><aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside></div>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Home - Design', 'twentyeleven' ),
+		'id' => 'home-design',
+		'before_widget' => '<div class="design">',
+		'after_widget' => "<div class=clear></div></div>",
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Home - Development', 'twentyeleven' ),
+		'id' => 'home-dev',
+		'before_widget' => '<div class="development">',
+		'after_widget' => "<div class=clear></div></div>",
+		'before_title' => '<h2 style="color:#82bb00;">',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Home - Seo', 'twentyeleven' ),
+		'id' => 'home-seo',
+		'before_widget' => '<div class="design" style="float:right; border-top:3px solid #ff0000;">',
+		'after_widget' => "<div class=clear></div></div>",
+		'before_title' => '<h2 style="color:#ff0000;">',
+		'after_title' => '</h2>',
 	) );
 
 	register_sidebar( array(
