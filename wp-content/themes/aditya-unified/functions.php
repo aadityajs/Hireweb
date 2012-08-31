@@ -93,6 +93,10 @@ function twentyeleven_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentyeleven' ) );
+	register_nav_menu( 'footer1', __( 'Footer Menu - First', 'twentyeleven' ) );
+	register_nav_menu( 'footer2', __( 'Footer Menu - Second', 'twentyeleven' ) );
+	register_nav_menu( 'footer3', __( 'Footer Menu - Third', 'twentyeleven' ) );
+	register_nav_menu( 'footer4', __( 'Footer Menu - Fourth', 'twentyeleven' ) );
 
 	// Add support for a variety of post formats
 	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
@@ -424,6 +428,33 @@ function twentyeleven_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name' => __( 'Designer', 'twentyeleven' ),
+		'id' => 'designer',
+		'before_widget' => '',
+		'after_widget' => "",
+		'before_title' => '<h2 style="display: none;">',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'How it works - Sidebar', 'twentyeleven' ),
+		'id' => 'how-it-works',
+		'before_widget' => '',
+		'after_widget' => "",
+		'before_title' => '<h2 style="display: none;">',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Footer - Testimonials', 'twentyeleven' ),
+		'id' => 'testimonials',
+		'before_widget' => '',
+		'after_widget' => "",
+		'before_title' => '<h1">',
+		'after_title' => '</h1>',
+	) );
+
+	register_sidebar( array(
 		'name' => __( 'Showcase Sidebar', 'twentyeleven' ),
 		'id' => 'sidebar-2',
 		'description' => __( 'The sidebar for the optional Showcase Template', 'twentyeleven' ),
@@ -635,4 +666,6 @@ function twentyeleven_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'twentyeleven_body_classes' );
+
+add_theme_support( 'menus' );
 

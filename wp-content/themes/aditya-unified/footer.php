@@ -29,11 +29,20 @@
 <!--end blog-->
 <!--start footer-->
  <div class="blog">
-    <div class="client_say">
+
+
+
+    <!-- <div class="client_say">
       <h1>What our client say</h1>
       <p>They did an exceptional job on my site. I definitely recommend them. I’m very happy with the quality of the coding. Even though my design team provided them with the theme...</p>
       <p class="paul">- Paul Schiff<br><a href="#">Read more »</a></p>
+    </div> -->
+    <div class="client_say">
+      <h1>What our client say</h1>
+
+      <?php dynamic_sidebar('testimonials	'); ?>
     </div>
+
     <div class="blog_news">
       <h1>New on our Blog</h1>
       <div class="post_txt">
@@ -57,7 +66,13 @@
   </div>
   <div class="footerinner">
     <div class="footer_link">
-      <ul>
+
+    	<?php wp_nav_menu( array( 'theme_location' => 'footer1' ) ); ?>
+    	<?php wp_nav_menu( array( 'theme_location' => 'footer2' ) ); ?>
+    	<?php wp_nav_menu( array( 'theme_location' => 'footer3' ) ); ?>
+    	<?php wp_nav_menu( array( 'theme_location' => 'footer4' ) ); ?>
+
+      	<!-- <ul>
             <li><a href="#">Hire Web Theme Designer</a></li>
             <li><a href="#">Hire WordPress Theme Designer</a></li>
             <li><a href="#">Hire Magento Theme Designer</a></li>
@@ -84,7 +99,7 @@
             <li><a href="#">Hire osCommerce Developer</a></li>
             <li><a href="#">Hire Joomla Developer</a></li>
             <li><a href="#">Hire PHP Developer</a></li>
-          </ul>
+          </ul> -->
           <div class="clear"></div>
        </div>
        <div class="footer_bluelink">

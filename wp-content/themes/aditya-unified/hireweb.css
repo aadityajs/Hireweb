@@ -84,7 +84,7 @@ a.logo{
 	margin: 0 2px;
 }
 nav{
-	width: 715px;
+	width: auto;
 	height: 28px;
 	float: right;
 }

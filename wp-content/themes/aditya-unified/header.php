@@ -89,7 +89,7 @@
 			<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
-        <nav>
+        <nav id="access" role="navigation">
 	        <h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
 			<?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 			<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
@@ -140,7 +140,16 @@
 							$header_image_height = HEADER_IMAGE_HEIGHT;
 						}
 						?>
-					<img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
+
+					<?php if (is_page_template('designer-page.php')) { ?>
+						<img src="<?php echo get_template_directory_uri(); ?>/images/banner_designer.png" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
+					<?php } elseif (is_page_template('how-it-works.php')) { ?>
+						<img src="<?php echo get_template_directory_uri(); ?>/images/banner_howitworks.png" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
+					<?php } else { ?>
+						<img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
+					<?php } ?>
+
+
 				<?php endif; // end check for featured image or standard header ?>
 			</a>
 			<?php endif; // end check for removed header image ?>
