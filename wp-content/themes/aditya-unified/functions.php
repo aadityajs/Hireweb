@@ -392,6 +392,15 @@ function twentyeleven_widgets_init() {
 	register_widget( 'Twenty_Eleven_Ephemera_Widget' );
 
 	register_sidebar( array(
+		'name' => __( 'Top menu', 'twentyeleven' ),
+		'id' => 'topmenu',
+		'before_widget' => '',
+		'after_widget' => "",
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'twentyeleven' ),
 		'id' => 'sidebar-1',
 		'before_widget' => '<div class="body_right"><aside id="%1$s" class="widget %2$s">',
@@ -450,9 +459,18 @@ function twentyeleven_widgets_init() {
 		'id' => 'testimonials',
 		'before_widget' => '',
 		'after_widget' => "",
-		'before_title' => '<h1">',
-		'after_title' => '</h1>',
+		'before_title' => '',
+		'after_title' => '',
 	) );
+
+	register_sidebar( array(
+			'name' => __( 'Footer - Twitter', 'twentyeleven' ),
+			'id' => 'twitter',
+			'before_widget' => '',
+			'after_widget' => "",
+			'before_title' => '<h1>',
+			'after_title' => '</h1>',
+		) );
 
 	register_sidebar( array(
 		'name' => __( 'Showcase Sidebar', 'twentyeleven' ),

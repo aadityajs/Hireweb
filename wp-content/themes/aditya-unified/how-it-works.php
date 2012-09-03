@@ -49,7 +49,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 
-          <div class="simple_txt">
+          <!-- <div class="simple_txt">
           	  <strong>4</strong> Simple Steps To Getting Started
           </div>
           <div class="simple_txt2"> It's easy to getting started now. Just follow these four easy steps below and convert your imagination into reality without any headache.</div>
@@ -89,7 +89,7 @@ get_header(); ?>
             </div>
           	 <div class="step_box_left" style="float:right;"><img src="<?php bloginfo('template_directory')?>/images/step_04.png" alt=""></div>
            <div class="clear"></div>
-          </div>
+          </div> -->
 
         </div>
 

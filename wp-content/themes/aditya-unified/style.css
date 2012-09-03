@@ -81,7 +81,7 @@ body {
 	margin: 0 7.6%;
 }
 #access div {
-	margin: 0 7.6%;
+	margin: 0% 7.6% 2.3% 2%;
 }
 #primary {
 	float: left;
@@ -563,8 +563,8 @@ a:hover {
 #access ul {
 	font-size: 13px;
 	list-style: none;
-	margin: 0 0 0 -0.8125em;
-	padding-left: 0;
+	/*margin: 0 0 0 -0.8125em;
+	*/padding-left: 0;
 }
 #access li {
 	float: left;
@@ -578,24 +578,24 @@ a:hover {
 	text-decoration: none;
 }
 #access ul ul {
-	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	/*-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	display: none;
 	float: left;
 	margin: 0;
-	position: absolute;
+	position: absolute;*/
 	/*top: 3.333em;
-	*/left: 0;
-	width: 258px;
+	left: 0;
+	width: 258px;*/
 	z-index: 99999;
 }
 #access ul ul ul {
-	left: 100%;
+	/*left: 100%;
 	top: 0;
-}
+*/}
 #access ul ul a {
-	background: #f9f9f9;
+	/*background: #f9f9f9;
 	border-bottom: 1px dotted #ddd;
 	color: #444;
 	font-size: 13px;
@@ -604,21 +604,21 @@ a:hover {
 	line-height: 1.4em;
 	padding: 10px 10px;
 	width: 238px;
-}
+*/}
 #access li:hover > a,
 #access ul ul :hover > a,
 #access a:focus {
-	background: #efefef;
-}
+	/*background: #efefef;
+*/}
 #access li:hover > a,
 #access a:focus {
-	background: #f9f9f9; /* Show a solid color for older browsers */
+	/*background: #f9f9f9;  Show a solid color for older browsers 
 	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
 	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5));  Older webkit syntax 
 	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
 	color: #373737;
-}
+*/}
 #access ul li:hover > ul {
 	display: block;
 }

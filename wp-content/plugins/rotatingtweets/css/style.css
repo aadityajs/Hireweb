@@ -1,0 +1,34 @@
+/* This sets the style for all tweets */
+p.rtw_main {
+	margin-bottom: 2%;
+}
+
+p.rtw_main a {
+	color: #fff;
+	text-decoration: none;
+}
+
+p.rtw_meta {
+	font-size: 80%;
+	line-height: normal;
+	margin-bottom: 2%;
+}
+/* This sets the style for tweets in articles or posts */
+#content .rotatingtweets  {
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	margin-bottom: 3%;
+}
+#content .rotatingtweet  {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+/*
+div.rtw_nav {
+	text-align: center;
+	font-size: 2em;
+}
+div.rtw_nav a.activeSlide {
+	color: red;
+}
+*/

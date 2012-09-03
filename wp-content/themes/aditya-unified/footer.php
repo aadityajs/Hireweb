@@ -45,23 +45,36 @@
 
     <div class="blog_news">
       <h1>New on our Blog</h1>
-      <div class="post_txt">
-      	<img src="<?php bloginfo( 'template_directory' ); ?>/images/arrow.png" alt=""> <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</strong><br>
-        <span>23 July 2012</span><br>
-        <a href="#">Read the post »</a>
-     </div>
-     <div class="post_txt">
-      	<img src="<?php bloginfo( 'template_directory' ); ?>/images/arrow.png" alt=""> <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</strong><br>
-        <span>23 July 2012</span><br>
-        <a href="#">Read the post »</a>
-     </div>
+
+		<?php
+		$args = array( 'numberposts' => 2 );
+		$lastposts = get_posts( $args );
+		foreach($lastposts as $post) : setup_postdata($post); ?>
+
+			 <div class="post_txt">
+		      	<img src="<?php bloginfo( 'template_directory' ); ?>/images/arrow.png" alt=""> <strong><?php the_title(); ?></strong><br>
+		        	<?php //the_excerpt(); ?>
+		        <span><?php echo get_post_time("d M Y"); ?></span><br>
+		        <a href="<?php the_permalink(); ?>">Read the post</a>
+		     </div>
+
+		<?php endforeach; ?>
+
+	     <!--<div class="post_txt">
+	      	<img src="<?php bloginfo( 'template_directory' ); ?>/images/arrow.png" alt=""> <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</strong><br>
+	        <span>23 July 2012</span><br>
+	        <a href="#">Read the post »</a>
+	     </div> -->
     </div>
     <div class="twitter_bg">
-      <h1>Latest Tweet</h1>
-      <p>Many Many Happy Birthday to Unified...Happy Birthday...:)<br/>
+    <h1>Latest Tweet</h1>
+    <?php dynamic_sidebar('twitter'); ?>
+
+
+
+      <!-- <p>Many Many Happy Birthday to Unified...Happy Birthday...:)<br/>
          <a href="#">http://www.unifiedinfotech.net</a>
-      </p>
-      <p class="recent">Follow Us<br><a href="#">@unifiedinfotech</a></p>
+      </p> -->
     </div>
   </div>
   <div class="footerinner">
