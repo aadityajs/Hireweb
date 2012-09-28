@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: How it works Template
+ * Template Name: Two column - Right Sidebar Template
  * @author Aditya Jyoti Saha
  */
 
@@ -125,5 +125,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php get_sidebar('how-it-works'); ?>
+<?php get_sidebar('two-column-right-sidebar'); ?>
 <?php get_footer(); ?>

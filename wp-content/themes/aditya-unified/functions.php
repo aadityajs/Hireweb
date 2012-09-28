@@ -437,6 +437,15 @@ function twentyeleven_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name' => __( 'Home - Tabbed Content', 'twentyeleven' ),
+		'id' => 'home-tabs',
+		'before_widget' => '',
+		'after_widget' => "",
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
 		'name' => __( 'Designer', 'twentyeleven' ),
 		'id' => 'designer',
 		'before_widget' => '',
@@ -446,8 +455,8 @@ function twentyeleven_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'How it works - Sidebar', 'twentyeleven' ),
-		'id' => 'how-it-works',
+		'name' => __( 'Two Column - Right Sidebar', 'twentyeleven' ),
+		'id' => 'two-column-right-sidebar',
 		'before_widget' => '',
 		'after_widget' => "",
 		'before_title' => '<h2 style="display: none;">',
@@ -466,6 +475,15 @@ function twentyeleven_widgets_init() {
 	register_sidebar( array(
 			'name' => __( 'Footer - Twitter', 'twentyeleven' ),
 			'id' => 'twitter',
+			'before_widget' => '',
+			'after_widget' => "",
+			'before_title' => '<h1>',
+			'after_title' => '</h1>',
+		) );
+
+	register_sidebar( array(
+			'name' => __( 'Footer - Copyright', 'twentyeleven' ),
+			'id' => 'copyright',
 			'before_widget' => '',
 			'after_widget' => "",
 			'before_title' => '<h1>',

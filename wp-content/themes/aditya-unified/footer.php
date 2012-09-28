@@ -125,7 +125,7 @@
           <span><img src="<?php bloginfo( 'template_directory' ); ?>/images/footer_icon6.png" alt="">  RSS </span>
       </div>
       <div class="copyright">
-        <div class="copyright_txt">Copyright © 2011 Unified web development. All Right Reserved</div>
+        <div class="copyright_txt"><?php dynamic_sidebar('copyright'); ?></div>
         <div class="hireme"><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/hireme.png" alt=""/></a></div>
       </div>
   </div>
@@ -143,5 +143,10 @@
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript">
+<!--
+	var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+//-->
+</script>
 </body>
 </html>

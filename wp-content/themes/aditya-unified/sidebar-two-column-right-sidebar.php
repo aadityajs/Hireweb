@@ -18,7 +18,7 @@ if ( 'content' != $current_layout ) :
           <div class="center_align" style="margin-top:-9px;"><img src="<?php bloginfo('template_directory')?>/images/quick_facts.png" alt=""></div>
           <div class="wrapper">
              <ul class="keys2">
-                <?php dynamic_sidebar('how-it-works'); ?>
+                <?php dynamic_sidebar('two-column-right-sidebar'); ?>
 
              </ul>
           </div>

@@ -395,13 +395,13 @@ nav li a:hover, nav li a.here{
 .left_content{
 	width: 240px;
 	height: auto;
-	border: 1px solid red;
+	border: 0px solid red;
 	float: left;
 }
 .right_content{
 	width: 150px;
 	height: auto;
-	border: 1px solid red;
+	border: 0px solid red;
 	float: right;
 	text-align:center;
 }
